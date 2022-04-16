@@ -162,7 +162,11 @@ class Router
         $class = $data[0];
         $method = $data[2];
 
+
         $controller = new $class();
+
+        if (!method_exists($controller, $method)) return;
+
         $controller->$method();
         return;
     }
