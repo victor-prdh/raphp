@@ -165,7 +165,7 @@ class Router
 
         $controller = new $class();
 
-        if (!method_exists($controller, $method)) return;
+        if (!method_exists($controller, $method)) return Server::NotImplementedException();
 
         $controller->$method();
         return;
