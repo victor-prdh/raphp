@@ -1,0 +1,16 @@
+{
+    "name": "victor-prdh/raphp",
+    "autoload": {
+        "psr-4": {
+            "VictorPrdh\\Raphp\\": "Raphp/",
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Victor Prudhomme",
+            "email": "contact@victor-prdh.com"
+        }
+    ],
+    "require": {}
+}
