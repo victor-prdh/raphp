@@ -24,16 +24,4 @@ class Server
     {
         return self::$configFolderPath;
     }
-
-    /**
-     * Set path for the config folder
-     *
-     * @return  self
-     */
-    public function setConfigFolderPath($configFolderPath)
-    {
-        $this->configFolderPath = $configFolderPath;
-
-        return $this;
-    }
 }

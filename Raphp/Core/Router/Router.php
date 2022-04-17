@@ -22,8 +22,6 @@ class Router
 
         $this->defineRoute();
 
-        //var_dump($this->routes);
-
         $this->match();
     }
 

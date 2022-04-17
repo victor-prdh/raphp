@@ -19,14 +19,6 @@ class Kernel
     }
 
     /**
-     * Get path for the config folder
-     */
-    public function getConfigFolderPath()
-    {
-        return $this->configFolderPath;
-    }
-
-    /**
      * Set path for the config folder
      *
      * @return  self
