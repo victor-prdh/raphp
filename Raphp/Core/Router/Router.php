@@ -136,7 +136,7 @@ class Router
                 foreach ($urlArray as $value) {
                     if (str_contains($value, "{")) {
                         $paramName = substr($value, 1, -1);
-                        $_SERVER[$paramName] = $currentUrlArray[$i];
+                        $_SERVER["params"][$paramName] =  $currentUrlArray[$i];
                     } elseif ($value !== $currentUrlArray[$i]) {
                         return new NotFoundException();
                         return;
