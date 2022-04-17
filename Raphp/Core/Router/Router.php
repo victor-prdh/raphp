@@ -75,7 +75,7 @@ class Router
      */
     public function defineRoute()
     {
-        $yaml = file_get_contents(Server::$configFolderPath . '/routes.yaml');
+        $yaml = file_get_contents(Server::getConfigFolderPath() . '/routes.yaml');
 
         $data = htmlspecialchars($yaml);
         $data = explode("\n", $data);

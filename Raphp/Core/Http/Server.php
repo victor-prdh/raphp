@@ -9,7 +9,7 @@ class Server
     /**
      * Path for the config folder
      */
-    public static $configFolderPath;
+    private static $configFolderPath;
 
     public function __construct($configFolderPath)
     {
@@ -20,7 +20,7 @@ class Server
     /**
      * Get path for the config folder
      */
-    public function getConfigFolderPath()
+    public static function getConfigFolderPath()
     {
         return self::$configFolderPath;
     }
