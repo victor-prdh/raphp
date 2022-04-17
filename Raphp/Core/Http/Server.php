@@ -17,20 +17,6 @@ class Server
         new Router();
     }
 
-    static function NotFoundException()
-    {
-        header('HTTP/1.0 404 Not Found');
-        echo "<h1>404 Not Found</h1>";
-        exit;
-    }
-
-    static function NotImplementedException()
-    {
-        header('HTTP/1.0 501 Not Implemented');
-        echo "<h1>501 Not Implemented</h1>";
-        exit;
-    }
-
     /**
      * Get path for the config folder
      */

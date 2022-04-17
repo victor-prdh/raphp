@@ -2,6 +2,8 @@
 
 namespace VictorPrdh\Raphp\Core\Router;
 
+use VictorPrdh\Raphp\Core\Http\Exception\NotFoundException;
+use VictorPrdh\Raphp\Core\Http\Exception\NotImplementedException;
 use VictorPrdh\Raphp\Core\Http\Server;
 
 class Router
@@ -138,7 +140,7 @@ class Router
                         $paramName = substr($value, 1, -1);
                         $_SERVER[$paramName] = $currentUrlArray[$i];
                     } elseif ($value !== $currentUrlArray[$i]) {
-                        Server::NotFoundException();
+                        return new NotFoundException();
                         return;
                     }
 
@@ -149,7 +151,7 @@ class Router
             }
         }
 
-        Server::NotFoundException();
+        return new NotFoundException();
         return;
     }
 
@@ -165,7 +167,7 @@ class Router
 
         $controller = new $class();
 
-        if (!method_exists($controller, $method)) return Server::NotImplementedException();
+        if (!method_exists($controller, $method)) return new NotImplementedException();
 
         $controller->$method();
         return;
