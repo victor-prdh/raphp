@@ -20,4 +20,13 @@ abstract class BaseController
     {
         return $this->params;
     }
+
+    /**
+     * Return json to client
+     */
+    public function json(array $response)
+    {
+        header('Content-Type: application/json; charset=utf-8');
+        echo json_encode($response);
+    }
 }
