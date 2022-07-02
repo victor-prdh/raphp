@@ -17,7 +17,11 @@ class Router
         if (!isset($_SERVER['PATH_INFO'])) {
             $this->currentUrl = "/";
         } else {
-            $this->currentUrl = $_SERVER['PATH_INFO'];
+            if (substr($_SERVER['PATH_INFO'], -1) === "/") {
+                $this->currentUrl = substr($_SERVER['PATH_INFO'], 0, -1);
+            } else {
+                $this->currentUrl = $_SERVER['PATH_INFO'];
+            }
         }
 
         $this->defineRoute();
