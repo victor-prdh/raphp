@@ -166,6 +166,7 @@ class Router
         $class = $data[0];
         $method = $data[2];
 
+        if (!class_exists($class)) return new NotImplementedException();
 
         $controller = new $class();
 
